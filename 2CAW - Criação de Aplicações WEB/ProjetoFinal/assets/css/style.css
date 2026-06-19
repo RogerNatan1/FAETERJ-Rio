@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap");
+
+body {
+  font-family: "Nunito", sans-serif;
+  background-color: #f8fafc;
+  background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Animação suave de elevação ao passar o mouse no card do pet */
+.pet-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.pet-card:hover {
+  transform: translateY(-5px);
+  box-shadow:
+    0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Feedback tátil rápido ao clicar no botão de ação */
+.action-btn {
+  transition: all 0.2s;
+}
+
+.action-btn:active {
+  transform: scale(0.95);
+}
+
+/* Paleta de Cores Customizadas para cada tipo de tarefa */
+.bg-feed {
+  background-color: #f59e0b;
+}
+.bg-feed:hover {
+  background-color: #d97706;
+}
+
+.bg-meds {
+  background-color: #ef4444;
+}
+.bg-meds:hover {
+  background-color: #dc2626;
+}
+
+.bg-hygiene {
+  background-color: #8b5cf6;
+}
+.bg-hygiene:hover {
+  background-color: #7c3aed;
+}
+
+.bg-play {
+  background-color: #10b981;
+}
+.bg-play:hover {
+  background-color: #059669;
+}

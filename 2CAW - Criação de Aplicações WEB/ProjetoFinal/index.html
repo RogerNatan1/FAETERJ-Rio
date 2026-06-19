@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PetCare Tracker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body class="min-h-screen text-slate-800 pb-12">
+    <header class="bg-white shadow-sm border-b border-slate-200 py-6 mb-8">
+      <div class="max-w-5xl mx-auto px-4 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="bg-indigo-100 text-indigo-600 p-3 rounded-full">
+            <i class="fa-solid fa-paw text-2xl"></i>
+          </div>
+          <div>
+            <h1 class="text-2xl font-bold text-slate-800">PetCare Tracker</h1>
+            <p class="text-sm text-slate-500">
+              Nunca mais esqueça a rotina dos seus pets
+            </p>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <button
+            onclick="addPet()"
+            class="text-sm text-slate-500 hover:text-indigo-600 transition-colors flex items-center gap-2"
+          >
+            <i class="fa-solid fa-plus"></i> Adicionar Pet
+          </button>
+          <button
+            onclick="resetAll()"
+            class="text-sm text-slate-500 hover:text-red-500 transition-colors flex items-center gap-2"
+          >
+            <i class="fa-solid fa-rotate-right"></i> Resetar Dados
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-4">
+      <div
+        id="pets-container"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+      ></div>
+    </main>
+
+    <div
+      id="toast"
+      class="fixed bottom-5 right-5 transform translate-y-20 opacity-0 transition-all duration-300 bg-slate-800 text-white px-6 py-3 rounded-lg shadow-lg flex items-center gap-3 z-50"
+    >
+      <i class="fa-solid fa-check-circle text-green-400"></i>
+      <span id="toast-message">Ação registrada!</span>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
